@@ -1,12 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Electron Demo</title>
 </head>
+
 <body>
     <h1>Well Come to the Electron</h1>
+
+    <form>
+        <div>
+            <label for="fileSelect">Choose File</label>
+            <input type="file" accept="image/*">
+        </div>
+        <button type="submit">Get File</button>
+    </form>
+
+    <div class="screen">
+        <button id="screen_two">Open Screen Two</button>
+    </div>
 </body>
+
+<script>
+    const input = document.querySelector("input")
+    const submitButton = document.querySelector("button")
+
+    submitButton.addEventListener('click', (event) => {
+        event.preventDefault()
+        console.log('Submit', input.files[0])
+    })
+
+    const screenTwo = document.querySelector("#screen_two")
+</script>
+
 </html>
