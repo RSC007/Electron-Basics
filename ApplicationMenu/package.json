@@ -1,0 +1,14 @@
+{
+  "name": "applicationmenu",
+  "version": "1.0.0",
+  "description": "",
+  "main": "main.js",
+  "scripts": {
+    "electron": "electron ."
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "electron": "^17.0.0"
+  }
+}
