@@ -11,6 +11,10 @@ const Timer = () => {
       if (second === 59) {
         setMinute(minute + 1)
         setSecond(0)
+        window.electron.notificationApi.sendNotification(`${minute} Number of intervals done in minute!`);
+      }
+      if(second === 10){
+        window.electron.notificationApi.sendNotification(`${second} Number of intervals done in 10 second!`);
       }
     }, 1000)
 
